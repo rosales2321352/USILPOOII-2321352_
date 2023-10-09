@@ -9,13 +9,13 @@ import javax.swing.JPanel;
 
 
 
-public class Boton {
+public class Button {
 
-public static void colocarBotones(JPanel panel){
-    JButton boton1 = new JButton();
-    boton1.setText("Hola");
-    boton1.setBounds(0,0,100,40);
-    panel.add(boton1);
+public static void addButton(JPanel panel){
+    JButton button = new JButton();
+    button.setText("Click");
+    button.setBounds(0,0,100,40);
+    panel.add(button);
    
     }
 }
