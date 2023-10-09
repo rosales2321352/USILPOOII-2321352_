@@ -4,6 +4,7 @@
  */
 package core.panel;
 
+import core.panel.controles.Boton;
 import java.awt.Color;
 import javax.swing.JPanel;
 import javax.swing.plaf.DimensionUIResource;
@@ -16,13 +17,16 @@ public class MainPanel extends JPanel implements Runnable{
     
     private Thread mainThread;
     
-    public MainPanel(){
-       this.setPreferredSize(new DimensionUIResource(768,576));
+    public MainPanel(){ 
+       this.setPreferredSize(new DimensionUIResource(500,500));
        this.setBackground(Color.WHITE);
        this.setDoubleBuffered(true);
        this.setFocusable(true);
+       this.DrawControl();
     }
-    
+    private void DrawControl(){
+        Boton.colocarBotones(this);
+    }
     public void startPanelThread(){
         mainThread = new Thread(this);
         mainThread.start();
