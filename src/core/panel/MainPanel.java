@@ -4,7 +4,9 @@
  */
 package core.panel;
 
+import core.controls.Button;
 import java.awt.Color;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.plaf.DimensionUIResource;
 
@@ -21,7 +23,16 @@ public class MainPanel extends JPanel implements Runnable{
        this.setBackground(Color.WHITE);
        this.setDoubleBuffered(true);
        this.setFocusable(true);
+       this.DrawControls();
     }
+    
+    
+    private void DrawControls(){
+        
+        Button.addButton(this);
+        
+    }
+    
     
     public void startPanelThread(){
         mainThread = new Thread(this);

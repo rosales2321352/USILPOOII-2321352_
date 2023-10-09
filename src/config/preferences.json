@@ -1,0 +1,16 @@
+{
+    "mysql": {
+        "db_host": "localhost",
+        "db_port": "3306",
+        "db_name": "test_mysql",
+        "db_user": "root",
+        "db_pass": ""
+    },
+    "psql":{
+        "db_host": "localhost",
+        "db_port": "",
+        "db_name": "test_psql",
+        "db_user": "root",
+        "db_pass": ""
+    }
+}
