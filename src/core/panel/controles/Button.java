@@ -4,18 +4,21 @@
  */
 package core.panel.controles;
 
+import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 
-
 public class Button {
 
-public static void addButton(JPanel panel){
-    JButton button = new JButton();
-    button.setText("Click");
-    button.setBounds(0,0,100,40);
-    panel.add(button);
-   
+    public static void addButton(JPanel panel) {
+        JButton button = new JButton();
+        button.setText("Click");
+
+        // Usar FlowLayout para que el botón se ajuste automáticamente al tamaño del panel
+        panel.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        panel.add(button);
     }
 }
+
